@@ -1,0 +1,28 @@
+using System;
+
+namespace OOP_Assignment_2.Struct
+{
+    internal struct DeliveryAddress
+    {
+        public string? City;
+        public string? Street;
+        public int BuildingNumber;
+
+        public DeliveryAddress(string? city, string? street, int buildingNumber)
+        {
+            City = city;
+            Street = street;
+            BuildingNumber = buildingNumber;
+        }
+
+        public string GetFullAddress()
+        {
+            return $"{BuildingNumber} {Street}, {City}";
+        }
+
+        public override string ToString()
+        {
+            return GetFullAddress();
+        }
+    }
+}
